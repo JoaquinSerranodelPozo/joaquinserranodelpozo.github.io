@@ -130,8 +130,9 @@ margin: 0 0 18px;
 }
 
 .affiliation {
-font-size: 1rem;
-color: var(--muted);
+font-size: 1.04rem;
+color: var(--blue-grey);
+font-weight: 600;
 margin: 0;
 }
 

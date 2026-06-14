@@ -8,6 +8,41 @@
   <title>Joaquín Serrano del Pozo</title>
 
   <link rel="stylesheet" href="style.css" />
+
+  <style>
+    .teaching-list {
+      list-style: none;
+      padding-left: 0;
+      margin: 0;
+      max-width: 100%;
+    }
+
+    .teaching-list li {
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      gap: 28px;
+      padding: 12px 0;
+      border-bottom: 1px solid #eadfce;
+    }
+
+    .teaching-list li:last-child {
+      border-bottom: none;
+    }
+
+    .teaching-list .year {
+      display: block;
+      min-width: 0;
+      color: var(--accent);
+    }
+
+    @media (max-width: 820px) {
+      .teaching-list li {
+        grid-template-columns: 1fr;
+        gap: 4px;
+      }
+    }
+  </style>
+
 </head>
 
 <body>
@@ -34,14 +69,14 @@
           <span class="nav-sub">Investigación</span>
         </a>
 
-        <a href="#teaching" class="nav-item">
-          <span class="nav-main">Teaching</span>
-          <span class="nav-sub">Docencia</span>
-        </a>
-
         <a href="#publications" class="nav-item">
           <span class="nav-main">Publications</span>
           <span class="nav-sub">Publicaciones</span>
+        </a>
+
+        <a href="#teaching" class="nav-item">
+          <span class="nav-main">Teaching</span>
+          <span class="nav-sub">Docencia</span>
         </a>
 
         <a href="#contact" class="nav-item">
@@ -164,43 +199,53 @@
       </div>
     </section>
 
-    <section id="teaching">
-      <h2>Teaching</h2>
-
-      <ul class="career-list">
-        <li>
-          <span class="year">2024–2025</span>
-          Designed and taught the Übung “The End of Antiquity? The Crucial Seventh Century and Byzantium” as part of the Teach@Tübingen Postdoctoral Fellowship, University of Tübingen.
-        </li>
-
-        <li>
-          <span class="year">2023–2024</span>
-          Tutor for “History of Art 1A: Art and Belief in Europe”, Edinburgh College of Art, University of Edinburgh.
-        </li>
-
-        <li>
-          <span class="year">2020–2024</span>
-          Tutor for “Transformation of the Roman World” and “Roman History 1B”, School of History, Classics and Archaeology, University of Edinburgh.
-        </li>
-
-        <li>
-          <span class="year">2017–2019</span>
-          Lecturer in the Diploma Programme in Medieval Civilisation and Culture, Pontifical Catholic University of Valparaíso (PUCV).
-        </li>
-
-        <li>
-          <span class="year">2013–2017</span>
-          Tutor for Medieval History I and Medieval History II, Pontifical Catholic University of Valparaíso (PUCV).
-        </li>
-      </ul>
-    </section>
-
     <section id="publications">
       <h2>Publications</h2>
 
       <div id="publications-content">
         <p class="muted">Loading publications…</p>
       </div>
+    </section>
+
+    <section id="teaching">
+      <h2>Teaching</h2>
+
+      <ul class="teaching-list">
+        <li>
+          <span class="year">2024–2025</span>
+          <span>
+            Designed and taught the Übung “The End of Antiquity? The Crucial Seventh Century and Byzantium” as part of the Teach@Tübingen Postdoctoral Fellowship, University of Tübingen.
+          </span>
+        </li>
+
+        <li>
+          <span class="year">2023–2024</span>
+          <span>
+            Tutor in the course “History of Art 1A: Art and Belief in Europe”, Edinburgh College of Art, University of Edinburgh.
+          </span>
+        </li>
+
+        <li>
+          <span class="year">2020–2024</span>
+          <span>
+            Tutor in the courses “Transformation of the Roman World” and “Roman History 1B”, School of History, Classics and Archaeology, University of Edinburgh.
+          </span>
+        </li>
+
+        <li>
+          <span class="year">2017–2019</span>
+          <span>
+            Teaching fellow in the Diploma Programme in Medieval Civilisation and Culture, Pontifical Catholic University of Valparaíso (PUCV).
+          </span>
+        </li>
+
+        <li>
+          <span class="year">2013–2017</span>
+          <span>
+            Tutor in the courses Medieval History I and Medieval History II, Pontifical Catholic University of Valparaíso (PUCV).
+          </span>
+        </li>
+      </ul>
     </section>
 
     <section id="contact">

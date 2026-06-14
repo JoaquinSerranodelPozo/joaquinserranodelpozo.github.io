@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>About Relics! | Joaquín Serrano del Pozo</title>
+
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    .relics-page-header {
+      padding: 24px 38px 42px;
+      border-bottom: 1px solid var(--line);
+      background: linear-gradient(135deg, #fffdf8 0%, #f4eadc 100%);
+    }
+
+    .relics-nav {
+      margin-bottom: 28px;
+    }
+
+    .relics-hero {
+      display: grid;
+      grid-template-columns: 1fr 320px;
+      gap: 38px;
+      align-items: center;
+    }
+
+    .relics-title {
+      font-size: 3rem;
+      font-weight: normal;
+      line-height: 1.08;
+      margin: 0 0 12px;
+      color: var(--accent-dark);
+      letter-spacing: -0.03em;
+    }
+
+    .relics-subtitle {
+      font-size: 1.14rem;
+      color: var(--blue-grey);
+      max-width: 720px;
+      margin: 0 0 12px;
+    }
+
+    .relics-note {
+      color: var(--muted);
+      font-size: 0.95rem;
+      max-width: 720px;
+    }
+
+    .mandylion-image {
+      width: 100%;
+      border: 1px solid var(--line);
+      background: #fff;
+    }
+
+    .construction-box {
+      background: #f1eadf;
+      border: 1px solid var(--line);
+      padding: 24px;
+      margin-top: 10px;
+    }
+
+    .construction-box p:last-child {
+      margin-bottom: 0;
+    }
+
+    @media (max-width: 820px) {
+      .relics-page-header {
+        padding-left: 24px;
+        padding-right: 24px;
+      }
+
+      .relics-hero {
+        grid-template-columns: 1fr;
+      }
+
+      .relics-title {
+        font-size: 2.35rem;
+      }
+
+      .mandylion-image {
+        max-width: 360px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+    <div class="site">
+      <header class="relics-page-header">
+        <nav class="relics-nav">
+          <a href="index.html" class="nav-item">
+            <span class="nav-main">← Home</span>
+            <span class="nav-sub">Inicio</span>
+          </a>
+        </nav>
+
+        <div class="relics-hero">
+          <div>
+            <h1 class="relics-title">About Relics!</h1>
+
+            <p class="relics-subtitle">
+              A public-facing space for short, accessible texts on Christian relics, sacred objects, and medieval religious culture.
+            </p>
+
+            <p class="relics-note">
+              Una sección de divulgación sobre reliquias cristianas, objetos sagrados y cultura religiosa medieval.
+            </p>
+          </div>
+
+          <img class="mandylion-image" src="Mandylion.png" alt="The Mandylion" />
+        </div>
+      </header>
+
+      <main>
+        <section>
+          <h2>Under construction</h2>
+
+          <div class="construction-box">
+            <p>
+              This section is currently under construction. It will gather short essays and visual materials for a wider audience, based on my research on Christian relics in Late Antique, Byzantine, and medieval contexts.
+            </p>
+
+            <p class="small-translation">
+              Esta sección está en construcción. Aquí se reunirán textos breves y materiales visuales para público general, basados en mi investigación sobre las reliquias cristianas en contextos tardoantiguos, bizantinos y medievales.
+            </p>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <footer>
+      © Joaquín Serrano del Pozo. Personal academic website.
+    </footer>
+  </div>
+</body>
+</html>

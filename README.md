@@ -1,2 +1,2 @@
-# jserrano.github.io
+# joaquinserranodelpozo.github.io
 Personal academic website

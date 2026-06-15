@@ -18,15 +18,28 @@
       overflow: hidden;
     }
 
-    .page-hero img {
-      width: 100%;
+    .hero-image {
+      justify-self: end;
       max-width: 520px;
+      width: 100%;
+      margin: 0;
+    }
+
+    .hero-image img {
+      width: 100%;
       height: 220px;
       object-fit: cover;
       object-position: center;
-      justify-self: end;
+      display: block;
       border: 1px solid var(--border, #d8cbbd);
       background: #fff;
+    }
+
+    .hero-image figcaption {
+      margin-top: 0.55rem;
+      font-size: 0.8rem;
+      line-height: 1.35;
+      color: var(--muted, #6f6a66);
     }
 
     .relics-list {
@@ -72,6 +85,11 @@
     .relic-article h3 {
       margin-top: 0;
       margin-bottom: 0.5rem;
+    }
+
+    .article-description {
+      color: var(--text, #1d1d1d);
+      max-width: 850px;
     }
 
     .language-switch {
@@ -132,9 +150,12 @@
         grid-template-columns: 1fr;
       }
 
-      .page-hero img {
+      .hero-image {
         justify-self: start;
         max-width: 100%;
+      }
+
+      .hero-image img {
         height: 180px;
       }
 
@@ -166,7 +187,12 @@
     <p class="spanish">Una sección de divulgación sobre reliquias cristianas, objetos sagrados y cultura religiosa medieval.</p>
   </div>
 
-  <img src="Procession relics 1037.jpg" alt="Medieval image of a relic procession" />
+  <figure class="hero-image">
+    <img src="Procession relics 1037.jpg" alt="Procession with relics for a drought in AD 1037 in the Madrid Skylitzes" />
+    <figcaption>
+      Procession with relics for a drought in AD 1037 in the Madrid Skylitzes, Madrid, BNE, VITR/26/2, fol. 210v. Biblioteca Nacional de España.
+    </figcaption>
+  </figure>
 </section>
 
 <section>
@@ -188,12 +214,12 @@
         <div>
           <div class="lang-version lang-en active">
             <h3>Christian Relicmania: An Introduction to the Cult of Relics</h3>
-            <p>The word relic comes from the Latin <em>reliquiae</em>, meaning remains or remnants. In everyday language, it usually refers to something left over from the past: an old object, a surviving trace, or a material reminder of another time.</p>
+            <p class="article-description">A brief introduction to the Christian cult of relics, its historical development, and its modern study, with a selected bibliography for further reading.</p>
           </div>
 
           <div class="lang-version lang-es">
             <h3>Reliquiomanía cristiana: una introducción al culto de las reliquias</h3>
-            <p>La palabra reliquia viene del latín <em>reliquiae</em>, que significa restos o remanentes. En el lenguaje común, suele referirse a algo que queda del pasado: un objeto antiguo, un vestigio o una huella material de otra época.</p>
+            <p class="article-description">Una breve introducción al culto cristiano de las reliquias, su desarrollo histórico y su estudio moderno, con una bibliografía seleccionada para seguir leyendo.</p>
           </div>
 
           <div class="language-switch" aria-label="Choose language">
@@ -208,7 +234,7 @@
             </summary>
 
             <div class="lang-version lang-en active">
-              <p>In this broad sense, all human cultures preserve relics of some kind, from family heirlooms and ancestral objects to national monuments, documents, and treasures.</p>
+              <p>The word relic comes from the Latin <em>reliquiae</em>, meaning remains or remnants. In everyday language, it usually refers to something left over from the past: an old object, a surviving trace, or a material reminder of another time. In this broad sense, all human cultures preserve relics of some kind, from family heirlooms and ancestral objects to national monuments, documents, and treasures.</p>
 
               <p>Many religions have also preserved and honoured relics. Buddhism, for example, developed important traditions around the bodily remains of holy figures. In Islam, some objects associated with the Prophet Muhammad and the first caliphs have also been preserved and respected. Christianity, however, gave relics an especially central role. From Late Antiquity onward, Christian thinkers developed a theological defence of relic veneration, and relics became a major part of Christian religious life, especially during the Middle Ages.</p>
 
@@ -255,7 +281,7 @@
             </div>
 
             <div class="lang-version lang-es">
-              <p>En este sentido amplio, todas las culturas humanas conservan reliquias de algún tipo, desde recuerdos familiares y objetos ancestrales hasta monumentos, documentos y tesoros nacionales.</p>
+              <p>La palabra reliquia viene del latín <em>reliquiae</em>, que significa restos o remanentes. En el lenguaje común, suele referirse a algo que queda del pasado: un objeto antiguo, un vestigio o una huella material de otra época. En este sentido amplio, todas las culturas humanas conservan reliquias de algún tipo, desde recuerdos familiares y objetos ancestrales hasta monumentos, documentos y tesoros nacionales.</p>
 
               <p>Muchas religiones también han preservado y honrado reliquias. El budismo, por ejemplo, desarrolló importantes tradiciones en torno a los restos corporales de figuras santas. En el islam, algunos objetos asociados con el profeta Mahoma y los primeros califas también han sido conservados y respetados. Sin embargo, el cristianismo dio a las reliquias un lugar especialmente central. Desde la Antigüedad Tardía, los pensadores cristianos desarrollaron una defensa teológica de su veneración, y las reliquias se convirtieron en una parte fundamental de la vida religiosa cristiana, sobre todo durante la Edad Media.</p>
 
@@ -318,12 +344,12 @@
         <div>
           <div class="lang-version lang-en active">
             <h3>The Relics of Saint Andrew and Saint Timothy in Constantinople</h3>
-            <p>The ancient city of Byzantium, later famous for its enormous collection of sacred treasures, did not play an important role in the first centuries of Christianity.</p>
+            <p class="article-description">A brief essay on one of the earliest major translations of relics to Constantinople and its role in the formation of the Christian identity of the New Rome.</p>
           </div>
 
           <div class="lang-version lang-es">
             <h3>Las reliquias de san Andrés y san Timoteo en Constantinopla</h3>
-            <p>La antigua ciudad de Bizancio, que más tarde sería famosa por su enorme colección de tesoros sagrados, no tuvo un papel importante en los primeros siglos del cristianismo.</p>
+            <p class="article-description">Un breve ensayo sobre una de las primeras grandes traslaciones de reliquias a Constantinopla y su papel en la formación de la identidad cristiana de la Nueva Roma.</p>
           </div>
 
           <div class="language-switch" aria-label="Choose language">
@@ -338,7 +364,7 @@
             </summary>
 
             <div class="lang-version lang-en active">
-              <p>For this reason, when Constantine founded the New Rome there in 324, the city did not possess especially important relics, apart from the bodies of a few little-known local martyrs. The great collection of relics that later made Constantinople famous was formed gradually, through sacred objects and remains brought from other parts of the Empire.</p>
+              <p>The ancient city of Byzantium, later famous for its enormous collection of sacred treasures, did not play an important role in the first centuries of Christianity. For this reason, when Constantine founded the New Rome there in 324, the city did not possess especially important relics, apart from the bodies of a few little-known local martyrs. The great collection of relics that later made Constantinople famous was formed gradually, through sacred objects and remains brought from other parts of the Empire.</p>
 
               <p>The earliest translations of relics were often attributed to Constantine the Great. This is not surprising, since the Byzantines tended to associate almost everything connected with the origins of their capital with Constantine. However, as John Wortley pointed out, there is no clear contemporary evidence that major relic translations to Constantinople took place during his reign. The earliest known importations seem to belong instead to the reign of his son, Constantius II, between 337 and 361. Later, during the fifth century, especially under Theodosius II and his sister Pulcheria, the arrival of relics in the capital became much more frequent.</p>
 
@@ -368,7 +394,7 @@
             </div>
 
             <div class="lang-version lang-es">
-              <p>Por eso, cuando Constantino fundó allí la Nueva Roma en el año 324, la ciudad no contaba con reliquias especialmente importantes, salvo los cuerpos de algunos mártires locales poco conocidos. La gran colección de reliquias que más tarde haría célebre a Constantinopla se formó gradualmente, a través de objetos y restos sagrados traídos desde otros lugares del Imperio.</p>
+              <p>La antigua ciudad de Bizancio, que más tarde sería famosa por su enorme colección de tesoros sagrados, no tuvo un papel importante en los primeros siglos del cristianismo. Por eso, cuando Constantino fundó allí la Nueva Roma en el año 324, la ciudad no contaba con reliquias especialmente importantes, salvo los cuerpos de algunos mártires locales poco conocidos. La gran colección de reliquias que más tarde haría célebre a Constantinopla se formó gradualmente, a través de objetos y restos sagrados traídos desde otros lugares del Imperio.</p>
 
               <p>Las primeras traslaciones de reliquias fueron atribuidas con frecuencia a Constantino el Grande. Esto no es extraño, porque los bizantinos tendían a asociar con Constantino casi todo lo relacionado con los orígenes de su capital. Sin embargo, como señaló John Wortley, no existe evidencia contemporánea clara de que durante su reinado se hayan producido traslados importantes de reliquias hacia Constantinopla. Las primeras importaciones conocidas parecen pertenecer más bien al reinado de su hijo, Constancio II, entre los años 337 y 361. Más tarde, durante el siglo V, especialmente bajo Teodosio II y su hermana Pulqueria, la llegada de reliquias a la capital se volvió mucho más frecuente.</p>
 

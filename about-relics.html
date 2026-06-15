@@ -1,28 +1,49 @@
-```html
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>About Relics! | Joaquín Serrano del Pozo</title>
+
   <link rel="stylesheet" href="style.css" />
 
   <style>
+    .page-hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.35fr) minmax(260px, 0.85fr);
+      gap: 2rem;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .page-hero img {
+      width: 100%;
+      max-width: 520px;
+      height: 220px;
+      object-fit: cover;
+      object-position: center;
+      justify-self: end;
+      border: 1px solid var(--border, #d8cbbd);
+      background: #fff;
+    }
+
     .relics-list {
       display: grid;
-      gap: 2.5rem;
+      gap: 2rem;
       margin-top: 2rem;
     }
 
     .relic-article {
       border: 1px solid var(--border, #d8cbbd);
       background: var(--panel, #f3eee6);
-      padding: 1.5rem;
+      padding: 1.4rem;
     }
 
     .relic-article-grid {
       display: grid;
-      grid-template-columns: minmax(220px, 34%) 1fr;
+      grid-template-columns: 260px minmax(0, 1fr);
       gap: 1.5rem;
       align-items: start;
     }
@@ -32,17 +53,19 @@
     }
 
     .relic-article img {
-      width: 100%;
-      height: auto;
+      width: 260px;
+      height: 180px;
+      object-fit: cover;
+      object-position: center;
       display: block;
       border: 1px solid var(--border, #d8cbbd);
       background: #fff;
     }
 
     .relic-article figcaption {
-      margin-top: 0.6rem;
+      margin-top: 0.55rem;
       font-size: 0.82rem;
-      line-height: 1.45;
+      line-height: 1.4;
       color: var(--muted, #6f6a66);
     }
 
@@ -97,12 +120,36 @@
       font-size: 0.95rem;
     }
 
+    .copyright-note {
+      margin-top: 1.5rem;
+      font-size: 0.9rem;
+      color: var(--muted, #6f6a66);
+      font-style: italic;
+    }
+
     @media (max-width: 760px) {
+      .page-hero {
+        grid-template-columns: 1fr;
+      }
+
+      .page-hero img {
+        justify-self: start;
+        max-width: 100%;
+        height: 180px;
+      }
+
       .relic-article-grid {
         grid-template-columns: 1fr;
       }
+
+      .relic-article img {
+        width: 100%;
+        max-width: 360px;
+        height: 210px;
+      }
     }
   </style>
+
 </head>
 
 <body>
@@ -110,246 +157,263 @@
     <section class="hero page-hero">
       <div>
         <a class="back-link" href="index.html">← Home<br><span>Inicio</span></a>
-        <h1>About Relics!</h1>
-        <p>A public-facing space for short, accessible texts on Christian relics, sacred objects, and medieval religious culture.</p>
-        <p class="spanish">Una sección de divulgación sobre reliquias cristianas, objetos sagrados y cultura religiosa medieval.</p>
-      </div>
 
-      <img src="Procession relics 1037.jpg" alt="Medieval image of a relic procession" />
-    </section>
+```
+    <h1>About Relics!</h1>
 
-    <section>
-      <h2>Short essays</h2>
-      <p class="spanish">Textos breves</p>
+    <p>A public-facing space for short, accessible texts on Christian relics, sacred objects, and medieval religious culture.</p>
 
-      <div class="relics-list">
+    <p class="spanish">Una sección de divulgación sobre reliquias cristianas, objetos sagrados y cultura religiosa medieval.</p>
+  </div>
 
-        <article class="relic-article" id="christian-relicmania" data-current-lang="en">
-          <div class="relic-article-grid">
-            <figure>
-              <img src="FlaskSaintSergius.jpg" alt="Pilgrim flask of Saint Sergios" />
-              <figcaption>
-                Pilgrim Flask of Saint Sergios, Syrian, 6th–7th century, Late Antique. The Walters Art Museum, inv. 55.105.
-                <a href="https://art.thewalters.org/object/55.105/" target="_blank" rel="noopener">Source</a>.
-              </figcaption>
-            </figure>
+  <img src="Procession relics 1037.jpg" alt="Medieval image of a relic procession" />
+</section>
 
-            <div>
-              <div class="lang-version lang-en active">
-                <h3>Christian Relicmania: An Introduction to the Cult of Relics</h3>
-                <p>The word relic comes from the Latin <em>reliquiae</em>, meaning remains or remnants. In everyday language, it usually refers to something left over from the past: an old object, a surviving trace, or a material reminder of another time.</p>
-              </div>
+<section>
+  <h2>Short essays</h2>
+  <p class="spanish">Textos breves</p>
 
-              <div class="lang-version lang-es">
-                <h3>Reliquiomanía cristiana: una introducción al culto de las reliquias</h3>
-                <p>La palabra reliquia viene del latín <em>reliquiae</em>, que significa restos o remanentes. En el lenguaje común, suele referirse a algo que queda del pasado: un objeto antiguo, un vestigio o una huella material de otra época.</p>
-              </div>
+  <div class="relics-list">
 
-              <div class="language-switch" aria-label="Choose language">
-                <button type="button" data-article="christian-relicmania" data-lang="en" aria-pressed="true">English</button>
-                <button type="button" data-article="christian-relicmania" data-lang="es" aria-pressed="false">Español</button>
-              </div>
+    <article class="relic-article" id="christian-relicmania" data-current-lang="en">
+      <div class="relic-article-grid">
+        <figure>
+          <img src="FlaskSaintSergius.jpg" alt="Pilgrim flask of Saint Sergios" />
+          <figcaption>
+            Pilgrim Flask of Saint Sergios, Syrian, 6th–7th century, Late Antique. The Walters Art Museum, inv. 55.105.
+            <a href="https://art.thewalters.org/object/55.105/" target="_blank" rel="noopener">Source</a>.
+          </figcaption>
+        </figure>
 
-              <details>
-                <summary>
-                  <span class="summary-en">Read full text</span>
-                  <span class="summary-es" style="display:none;">Leer texto completo</span>
-                </summary>
-
-                <div class="lang-version lang-en active">
-                  <p>In this broad sense, all human cultures preserve relics of some kind, from family heirlooms and ancestral objects to national monuments, documents, and treasures.</p>
-
-                  <p>Many religions have also preserved and honoured relics. Buddhism, for example, developed important traditions around the bodily remains of holy figures. In Islam, some objects associated with the Prophet Muhammad and the first caliphs have also been preserved and respected. Christianity, however, gave relics an especially central role. From Late Antiquity onward, Christian thinkers developed a theological defence of relic veneration, and relics became a major part of Christian religious life, especially during the Middle Ages.</p>
-
-                  <p>In a specifically Christian sense, relics are the bodily remains of saints and sacred figures, such as Christ and the Virgin Mary, or objects sanctified through contact with these figures or with their remains. For centuries, Christians venerated holy relics as instruments through which faith, the intercession of the saints, and the power of God could work miracles. Relics were used in many contexts: the consecration of churches, healing rituals, exorcisms, prayers during disasters, solemn oaths, public processions, and even military ceremonies.</p>
-
-                  <h4>The Study of Relics</h4>
-
-                  <p>The modern study of Christian relics has its roots in the religious debates that divided Europe from the sixteenth century onward. Protestant reformers rejected the cult of saints and relics, together with the veneration of images, as superstitions of the Roman Church. They questioned the reliability of saints’ lives, the antiquity of Catholic traditions, and the authenticity of many relics.</p>
-
-                  <p>Catholic scholars responded by defending these practices with historical arguments and documentary evidence. This context gave rise to major scholarly projects, such as the Bollandist Society and the <em>Acta Sanctorum</em>. Although these works were shaped by confessional debate, they also helped create the foundations for the historical study of saints and relics.</p>
-
-                  <p>During the Enlightenment, relics were often dismissed as signs of superstition, fraud, or irrational belief. More modern academic approaches appeared in the twentieth century, especially among historians of religion, art, and Late Antiquity. A major shift came in the 1970s with the work of Peter Brown, who argued that the cult of saints was not simply a symptom of decline or superstition, but one of the great cultural transformations of Late Antiquity. Since then, the study of relics has expanded enormously. Scholars now examine relics as religious, social, political, artistic, and material objects.</p>
-
-                  <h4>The Origins of the Cult of Relics</h4>
-
-                  <p>Historians influenced by Protestant polemics often saw the cult of saints and relics as a survival of paganism. According to this view, relic veneration was one example of how early Christianity had been “contaminated” by non-Christian practices after the legalisation and officialisation of the Church under Constantine.</p>
-
-                  <p>This idea had a long influence. Even today, it is common to hear that the cult of saints was simply a continuation of pagan polytheism, or that the cult of relics was just a Christian version of older magical and amuletic practices. But this explanation is too simple. Peter Brown showed that the rise of the cult of saints was better understood as a new cultural phenomenon of Late Antiquity. It had connections with older ideas and practices, but it was not merely a passive survival of pagan religion.</p>
-
-                  <p>Robert Wiśniewski has made a similar argument for relics. In his study of the beginnings of the cult of relics, he argues that Christian relic veneration emerged above all in the second half of the fourth century. It developed from the veneration of martyrs’ tombs and from reports of miracles, especially healings and exorcisms, that were said to occur at those places.</p>
-
-                  <p>Other scholars have added important nuances. The Christian cult of relics was new, but it did not appear in a cultural vacuum. It developed in the religious world of the late antique Mediterranean and Near East, where people already believed in sacred places, holy bodies, protective objects, and contact with divine power. The cult of heroes’ tombs in the Greco-Roman world, the veneration of biblical figures, and the use of amulets all formed part of this wider background.</p>
-
-                  <p>The key point is balance. We should not reduce the Christian cult of relics to a simple continuation of pagan practices. But neither should we imagine that it emerged without any connection to the world around it. It was a new Christian development, shaped by older cultural expectations and by biblical traditions.</p>
-
-                  <p>In the Acts of the Apostles, cloths that had touched Saint Paul were said to heal the sick and drive away evil spirits. This shows that ideas about holy contact, protection, and healing objects existed among Christians from a very early period. The Ark of the Covenant, the staff of Moses, and other sacred objects from the Old Testament also gave Christians powerful models for thinking about holy matter.</p>
-
-                  <p>However, perhaps the most interesting aspect of the Christian cult of relics is that it gave rise to ideas and practices that were completely new, or at least highly unusual, in the pre-Christian ancient world. These included, for example, the theft of relics and the ritual humiliation of relics, both analysed in the studies of Patrick Geary. These practices are not only curious and fascinating; they also show how, through the study of relics, we can approach the ways in which people in the past understood the relationship between the divine and material culture, as well as the presence of the supernatural in the everyday world around them.</p>
-
-                  <h4>Basic Bibliography</h4>
-                  <ul class="bibliography">
-                    <li>Brown, Peter. “The Rise and Function of the Holy Man in Late Antiquity.” <em>Journal of Roman Studies</em> 61 (1971): 80–101.</li>
-                    <li>Brown, Peter. <em>The Cult of the Saints: Its Rise and Function in Latin Christianity</em>. Chicago: University of Chicago Press, 1981.</li>
-                    <li>Delehaye, Hippolyte. <em>Les origines du culte des martyrs</em>. Brussels: Société des Bollandistes, 1912.</li>
-                    <li>Frolow, Anatole. <em>La relique de la Vraie Croix: recherches sur le développement d’un culte</em>. Paris: Institut français d’études byzantines, 1961.</li>
-                    <li>Geary, Patrick J. <em>Furta Sacra: Thefts of Relics in the Central Middle Ages</em>. Princeton: Princeton University Press, 1978. Revised edition, 1991.</li>
-                    <li>Hahn, Cynthia, and Holger A. Klein, eds. <em>Saints and Sacred Matter: The Cult of Relics in Byzantium and Beyond</em>. Washington, DC: Dumbarton Oaks Research Library and Collection, 2015.</li>
-                    <li>Smith, Julia M. H. “Portable Christianity: Relics in the Medieval West, c. 700–1200.” <em>Proceedings of the British Academy</em> 181 (2012): 143–167.</li>
-                    <li>Wiśniewski, Robert. <em>The Beginnings of the Cult of Relics</em>. Oxford: Oxford University Press, 2019.</li>
-                    <li>Wortley, John. <em>Studies on the Cult of Relics in Byzantium up to 1204</em>. Farnham, Surrey: Ashgate Variorum, 2009.</li>
-                  </ul>
-                </div>
-
-                <div class="lang-version lang-es">
-                  <p>En este sentido amplio, todas las culturas humanas conservan reliquias de algún tipo, desde recuerdos familiares y objetos ancestrales hasta monumentos, documentos y tesoros nacionales.</p>
-
-                  <p>Muchas religiones también han preservado y honrado reliquias. El budismo, por ejemplo, desarrolló importantes tradiciones en torno a los restos corporales de figuras santas. En el islam, algunos objetos asociados con el profeta Mahoma y los primeros califas también han sido conservados y respetados. Sin embargo, el cristianismo dio a las reliquias un lugar especialmente central. Desde la Antigüedad Tardía, los pensadores cristianos desarrollaron una defensa teológica de su veneración, y las reliquias se convirtieron en una parte fundamental de la vida religiosa cristiana, sobre todo durante la Edad Media.</p>
-
-                  <p>En un sentido específicamente cristiano, las reliquias son los restos corporales de los santos y de figuras sagradas, como Cristo y la Virgen María, o bien objetos santificados por el contacto con estas figuras o con sus restos. Durante siglos, los cristianos veneraron las santas reliquias como instrumentos a través de los cuales la fe, la intercesión de los santos y el poder de Dios podían obrar milagros. Las reliquias fueron usadas en muchos contextos: la consagración de iglesias, ritos de sanación, exorcismos, plegarias durante desastres, juramentos solemnes, procesiones públicas e incluso ceremonias militares.</p>
-
-                  <h4>El estudio de las reliquias</h4>
-
-                  <p>El estudio moderno de las reliquias cristianas tiene sus raíces en los debates religiosos que dividieron Europa desde el siglo XVI en adelante. Los reformadores protestantes rechazaron el culto de los santos y las reliquias, junto con la veneración de imágenes, como supersticiones de la Iglesia romana. También cuestionaron la confiabilidad de las vidas de santos, la antigüedad de las tradiciones católicas y la autenticidad de muchas reliquias.</p>
-
-                  <p>Los estudiosos católicos respondieron defendiendo estas prácticas mediante argumentos históricos y evidencia documental. En este contexto surgieron grandes proyectos eruditos, como la Sociedad de los Bolandistas y los <em>Acta Sanctorum</em>. Aunque estas obras estaban marcadas por el debate confesional, también ayudaron a crear las bases del estudio histórico de los santos y las reliquias.</p>
-
-                  <p>Durante la Ilustración, las reliquias fueron muchas veces descartadas como señales de superstición, fraude o creencias irracionales. Los enfoques académicos más modernos aparecieron en el siglo XX, sobre todo entre historiadores de la religión, del arte y de la Antigüedad Tardía. Un cambio fundamental se produjo en la década de 1970 con los trabajos de Peter Brown, quien sostuvo que el culto de los santos no debía entenderse simplemente como decadencia o superstición, sino como una de las grandes transformaciones culturales de la Antigüedad Tardía. Desde entonces, el estudio de las reliquias se ha expandido enormemente. Hoy los académicos las estudian como objetos religiosos, sociales, políticos, artísticos y materiales.</p>
-
-                  <h4>Los orígenes del culto a las reliquias</h4>
-
-                  <p>La historiografía influida por las polémicas protestantes solía ver el culto a los santos y a las reliquias como una supervivencia del paganismo. Según esta interpretación, la veneración de reliquias sería un ejemplo de cómo el cristianismo primitivo fue “contaminado” por prácticas no cristianas después de la legalización y oficialización de la Iglesia bajo Constantino.</p>
-
-                  <p>Esta idea tuvo una larga influencia. Incluso hoy es común escuchar que el culto a los santos fue simplemente una continuación del politeísmo pagano, o que el culto a las reliquias fue apenas una versión cristiana de antiguas prácticas mágicas y amuléticas. Pero esta explicación es demasiado simple. Peter Brown mostró que el desarrollo del culto de los santos se entiende mejor como un fenómeno cultural nuevo de la Antigüedad Tardía. Tuvo conexiones con ideas y prácticas anteriores, pero no fue una simple supervivencia pasiva del paganismo.</p>
-
-                  <p>Robert Wiśniewski ha desarrollado un argumento parecido para las reliquias. En su estudio sobre los inicios del culto a las reliquias, sostiene que la veneración cristiana de estos objetos surgió sobre todo en la segunda mitad del siglo IV. Se desarrolló a partir de la veneración de las tumbas de los mártires y de los relatos de milagros, especialmente curaciones y exorcismos, que supuestamente ocurrían en esos lugares.</p>
-
-                  <p>Otros académicos han agregado matices importantes. El culto cristiano a las reliquias fue nuevo, pero no apareció en un vacío cultural. Se desarrolló dentro del mundo religioso del Mediterráneo y el Medio Oriente tardoantiguos, donde ya existían creencias sobre lugares sagrados, cuerpos santos, objetos protectores y contacto con el poder divino. El culto a las tumbas de los héroes en el mundo grecorromano, la veneración de figuras bíblicas y el uso de amuletos formaban parte de ese trasfondo más amplio.</p>
-
-                  <p>El punto clave es mantener el equilibrio. No conviene reducir el culto cristiano a las reliquias a una simple continuación de prácticas paganas. Pero tampoco hay que imaginar que surgió sin ninguna conexión con el mundo que lo rodeaba. Fue un desarrollo cristiano nuevo, formado dentro de expectativas culturales más antiguas y también dentro de tradiciones bíblicas.</p>
-
-                  <p>En los Hechos de los Apóstoles, se dice que los paños que habían tocado a san Pablo sanaban a los enfermos y expulsaban espíritus malignos. Esto muestra que las ideas sobre contacto santo, protección y objetos sanadores existían entre los cristianos desde una época muy temprana. El Arca de la Alianza, el bastón de Moisés y otros objetos sagrados del Antiguo Testamento también ofrecieron modelos poderosos para pensar la materia santa.</p>
-
-                  <p>Sin embargo, quizás lo más interesante del culto cristiano a las reliquias es que dio origen a ideas y prácticas completamente novedosas, o al menos muy poco comunes en el mundo antiguo precristiano. Entre ellas se encuentran, por ejemplo, el robo de reliquias o los ritos de humillación de reliquias, analizados en los estudios de Patrick Geary. Estas prácticas no sólo son curiosas y fascinantes; también muestran cómo, a través del estudio de las reliquias, podemos acercarnos a la forma en que la gente del pasado entendía la relación entre lo divino y la cultura material, así como la presencia de lo sobrenatural en el mundo cotidiano que la rodeaba.</p>
-
-                  <h4>Bibliografía básica</h4>
-                  <ul class="bibliography">
-                    <li>Brown, Peter. “The Rise and Function of the Holy Man in Late Antiquity.” <em>Journal of Roman Studies</em> 61 (1971): 80–101.</li>
-                    <li>Brown, Peter. <em>The Cult of the Saints: Its Rise and Function in Latin Christianity</em>. Chicago: University of Chicago Press, 1981.</li>
-                    <li>Delehaye, Hippolyte. <em>Les origines du culte des martyrs</em>. Brussels: Société des Bollandistes, 1912.</li>
-                    <li>Frolow, Anatole. <em>La relique de la Vraie Croix: recherches sur le développement d’un culte</em>. Paris: Institut français d’études byzantines, 1961.</li>
-                    <li>Geary, Patrick J. <em>Furta Sacra: Thefts of Relics in the Central Middle Ages</em>. Princeton: Princeton University Press, 1978. Edición revisada, 1991.</li>
-                    <li>Hahn, Cynthia, and Holger A. Klein, eds. <em>Saints and Sacred Matter: The Cult of Relics in Byzantium and Beyond</em>. Washington, DC: Dumbarton Oaks Research Library and Collection, 2015.</li>
-                    <li>Smith, Julia M. H. “Portable Christianity: Relics in the Medieval West, c. 700–1200.” <em>Proceedings of the British Academy</em> 181 (2012): 143–167.</li>
-                    <li>Wiśniewski, Robert. <em>The Beginnings of the Cult of Relics</em>. Oxford: Oxford University Press, 2019.</li>
-                    <li>Wortley, John. <em>Studies on the Cult of Relics in Byzantium up to 1204</em>. Farnham, Surrey: Ashgate Variorum, 2009.</li>
-                  </ul>
-                </div>
-              </details>
-            </div>
+        <div>
+          <div class="lang-version lang-en active">
+            <h3>Christian Relicmania: An Introduction to the Cult of Relics</h3>
+            <p>The word relic comes from the Latin <em>reliquiae</em>, meaning remains or remnants. In everyday language, it usually refers to something left over from the past: an old object, a surviving trace, or a material reminder of another time.</p>
           </div>
-        </article>
 
-        <article class="relic-article" id="andrew-timothy" data-current-lang="en">
-          <div class="relic-article-grid">
-            <figure>
-              <img src="HolyApostlesChurch.jpg" alt="Miniature believed to represent the Church of the Holy Apostles" />
-              <figcaption>
-                Miniature from a twelfth-century Byzantine manuscript, believed to represent the Church of the Holy Apostles. Paris, Bibliothèque nationale de France, Grec. 1208, fol. 3v, BnF Gallica.
-                <a href="https://gallica.bnf.fr/ark:/12148/btv1b55013447b/f18.item" target="_blank" rel="noopener">Source</a>.
-              </figcaption>
-            </figure>
-
-            <div>
-              <div class="lang-version lang-en active">
-                <h3>The Relics of Saint Andrew and Saint Timothy in Constantinople</h3>
-                <p>The ancient city of Byzantium, later famous for its enormous collection of sacred treasures, did not play an important role in the first centuries of Christianity.</p>
-              </div>
-
-              <div class="lang-version lang-es">
-                <h3>Las reliquias de san Andrés y san Timoteo en Constantinopla</h3>
-                <p>La antigua ciudad de Bizancio, que más tarde sería famosa por su enorme colección de tesoros sagrados, no tuvo un papel importante en los primeros siglos del cristianismo.</p>
-              </div>
-
-              <div class="language-switch" aria-label="Choose language">
-                <button type="button" data-article="andrew-timothy" data-lang="en" aria-pressed="true">English</button>
-                <button type="button" data-article="andrew-timothy" data-lang="es" aria-pressed="false">Español</button>
-              </div>
-
-              <details>
-                <summary>
-                  <span class="summary-en">Read full text</span>
-                  <span class="summary-es" style="display:none;">Leer texto completo</span>
-                </summary>
-
-                <div class="lang-version lang-en active">
-                  <p>For this reason, when Constantine founded the New Rome there in 324, the city did not possess especially important relics, apart from the bodies of a few little-known local martyrs. The great collection of relics that later made Constantinople famous was formed gradually, through sacred objects and remains brought from other parts of the Empire.</p>
-
-                  <p>The earliest translations of relics were often attributed to Constantine the Great. This is not surprising, since the Byzantines tended to associate almost everything connected with the origins of their capital with Constantine. However, as John Wortley pointed out, there is no clear contemporary evidence that major relic translations to Constantinople took place during his reign. The earliest known importations seem to belong instead to the reign of his son, Constantius II, between 337 and 361. Later, during the fifth century, especially under Theodosius II and his sister Pulcheria, the arrival of relics in the capital became much more frequent.</p>
-
-                  <p>These early translations formed part of the wider Christianisation of the imperial city. Constantinople was the capital of the Eastern Roman Empire, an empire that from the mid-fourth century onward increasingly identified itself with Christianity. Yet the New Rome on the Bosporus could not yet compete with the Christian prestige of other cities of the Empire. Rome had the tombs of Peter and Paul. Jerusalem preserved the places associated with the life, death, and resurrection of Christ. Antioch, Ephesus, and other cities of the eastern Mediterranean possessed ancient apostolic and martyrial traditions. Constantinople, by contrast, was a new capital, and much of its Christian prestige had to be built through churches, ceremonies, sacred stories, and relics.</p>
-
-                  <p>In this context, we can understand the arrival of the relics of Saint Andrew and Saint Timothy, normally associated also with those of Saint Luke. According to the most widely accepted tradition, these relics were translated to Constantinople around the middle of the fourth century, probably between 356 and 357, during the reign of Constantius II. The relics of Saint Andrew are said to have come from Patras, in Greece; those of Saint Timothy from Ephesus; and those of Saint Luke from Thebes. The exact details are difficult to reconstruct, because the sources are late and sometimes contradictory, but tradition places these relics among the first major sacred importations to the capital.</p>
-
-                  <p>The place where they were deposited was especially significant: the church of the Holy Apostles. This building occupied a central place in the religious and political life of Constantinople. It was linked to the memory of the apostles and also to imperial power, because Constantine’s mausoleum stood there and many later Byzantine emperors would also be buried there. The presence of apostolic relics in this space strengthened the association between imperial power and Christianity, helping to present the authority of the emperors as part of a sacred order.</p>
-
-                  <p>Saint Andrew had particular importance. According to Christian tradition, he was one of the first disciples called by Christ and the brother of Saint Peter. His presence in Constantinople allowed the capital to be connected with apostolic authority. Over time, this association became even more important, as Byzantine tradition came to present Andrew as the founder of the Church of Byzantium. This idea developed more strongly in later centuries, but the presence of his relics in the capital helped give it a material and symbolic foundation.</p>
-
-                  <p>Saint Timothy, for his part, did not belong to the group of the twelve apostles, but he was a figure very close to the origins of Christianity. He was a disciple and collaborator of Saint Paul, and his relics connected Constantinople with Pauline memory and with the first expansion of Christianity in the eastern Mediterranean.</p>
-
-                  <p>The arrival of these relics also shows an important change in the Christian understanding of holy bodies. In Roman tradition, moving human remains from one tomb to another was a delicate and even problematic action. Funerary laws and customs protected the rest of the dead. During Late Antiquity, however, a new Christian sensibility began to take shape. The remains of the saints could be moved, deposited under altars, and brought to new cities, because they were seen as sacred presences capable of protecting, healing, and bringing the faithful closer to the power of God.</p>
-
-                  <p>For this reason, the translation of the relics of Saint Andrew and Saint Timothy to Constantinople was a key episode in the formation of the Christian identity of the New Rome. The city did not automatically inherit the religious prestige of the great apostolic centres of ancient Christianity. It built that prestige over time, through the arrival of relics, the foundation of churches, and the creation of new sacred traditions. Over the centuries, Constantinople would gather one of the most famous collections of relics in the Christian world. Among the first steps in that history were the relics of Andrew, Timothy, and Luke, brought from different parts of the Empire during the reign of Constantius II, deposited in the church of the Holy Apostles, and placed at the service of the religious and imperial memory of the capital.</p>
-
-                  <h4>Basic Bibliography</h4>
-                  <ul class="bibliography">
-                    <li>Klein, Holger A. “Sacred Relics and Imperial Ceremonies at the Great Palace of Constantinople.” In <em>Visualisierungen von Herrschaft</em>, edited by Franz Alto Bauer, 79–99. Byzas 5. Istanbul: Ege Yayınları, 2006.</li>
-                    <li>Mango, Cyril. “Constantine’s Mausoleum and the Translation of Relics.” <em>Byzantinische Zeitschrift</em> 83, no. 1 (1990): 51–62.</li>
-                    <li>Woods, David. “The Date of the Translation of the Relics of SS. Luke and Andrew to Constantinople.” <em>Vigiliae Christianae</em> 45, no. 3 (1991): 286–292.</li>
-                    <li>Wortley, John. “The Earliest Relic-Importations to Constantinople.” <em>Pecia: Ressources en médiévistique</em> 8–11, no. 1 (2005): 207–225.</li>
-                  </ul>
-                </div>
-
-                <div class="lang-version lang-es">
-                  <p>Por eso, cuando Constantino fundó allí la Nueva Roma en el año 324, la ciudad no contaba con reliquias especialmente importantes, salvo los cuerpos de algunos mártires locales poco conocidos. La gran colección de reliquias que más tarde haría célebre a Constantinopla se formó gradualmente, a través de objetos y restos sagrados traídos desde otros lugares del Imperio.</p>
-
-                  <p>Las primeras traslaciones de reliquias fueron atribuidas con frecuencia a Constantino el Grande. Esto no es extraño, porque los bizantinos tendían a asociar con Constantino casi todo lo relacionado con los orígenes de su capital. Sin embargo, como señaló John Wortley, no existe evidencia contemporánea clara de que durante su reinado se hayan producido traslados importantes de reliquias hacia Constantinopla. Las primeras importaciones conocidas parecen pertenecer más bien al reinado de su hijo, Constancio II, entre los años 337 y 361. Más tarde, durante el siglo V, especialmente bajo Teodosio II y su hermana Pulqueria, la llegada de reliquias a la capital se volvió mucho más frecuente.</p>
-
-                  <p>Estos primeros traslados formaron parte del proceso más amplio de cristianización de la ciudad imperial. Constantinopla era la capital del Imperio romano de Oriente, un imperio que desde mediados del siglo IV se fue identificando de manera creciente con el cristianismo. Sin embargo, la Nueva Roma del Bósforo no podía competir todavía con el prestigio cristiano de otras ciudades del Imperio. Roma tenía las tumbas de Pedro y Pablo. Jerusalén conservaba los lugares asociados con la vida, muerte y resurrección de Cristo. Antioquía, Éfeso y otras ciudades del Mediterráneo oriental poseían antiguas tradiciones apostólicas y martiriales. Constantinopla, en cambio, era una capital nueva, y buena parte de su prestigio cristiano tuvo que ser construido mediante iglesias, ceremonias, relatos sagrados y reliquias.</p>
-
-                  <p>En este contexto se entiende la llegada de las reliquias de san Andrés y san Timoteo, normalmente asociadas también con las de san Lucas. Según la tradición más aceptada, estas reliquias fueron trasladadas a Constantinopla hacia mediados del siglo IV, probablemente entre los años 356 y 357, durante el reinado de Constancio II. Las reliquias de san Andrés habrían venido desde Patras, en Grecia; las de san Timoteo desde Éfeso; y las de san Lucas desde Tebas. Los detalles exactos son difíciles de reconstruir, porque las fuentes son tardías y a veces contradictorias, pero la tradición sitúa estas reliquias entre las primeras grandes importaciones sagradas de la capital.</p>
-
-                  <p>El lugar donde fueron depositadas era especialmente significativo: la iglesia de los Santos Apóstoles. Este edificio ocupaba un lugar central en la vida religiosa y política de Constantinopla. Estaba vinculado a la memoria de los apóstoles y también al poder imperial, porque allí se encontraba el mausoleo de Constantino y allí serían enterrados, más tarde, muchos emperadores bizantinos. La presencia de reliquias apostólicas en este espacio reforzaba la asociación entre el poder imperial y el cristianismo, contribuyendo a presentar la autoridad de los emperadores como parte de un orden sagrado.</p>
-
-                  <p>San Andrés tenía una importancia particular. Según la tradición cristiana, fue uno de los primeros discípulos llamados por Cristo y hermano de san Pedro. Su presencia en Constantinopla permitía vincular la capital con la autoridad apostólica. Con el tiempo, esta asociación se volvió todavía más importante, pues la tradición bizantina llegó a presentar a Andrés como fundador de la Iglesia de Bizancio. Esta idea se desarrolló con más fuerza en siglos posteriores, pero la presencia de sus reliquias en la capital ayudó a darle un fundamento material y simbólico.</p>
-
-                  <p>San Timoteo, por su parte, no pertenecía al grupo de los doce apóstoles, pero era una figura muy cercana a los orígenes del cristianismo. Fue discípulo y colaborador de san Pablo, y sus reliquias conectaban a Constantinopla con la memoria paulina y con la primera expansión del cristianismo en el Mediterráneo oriental.</p>
-
-                  <p>La llegada de estas reliquias también muestra un cambio importante en la forma cristiana de entender los cuerpos santos. En la tradición romana, mover restos humanos de una tumba a otra era una acción delicada e incluso problemática. Las leyes y costumbres funerarias protegían el descanso de los muertos. Sin embargo, durante la Antigüedad Tardía comenzó a imponerse una nueva sensibilidad cristiana. Los restos de los santos podían ser trasladados, depositados bajo altares y llevados a nuevas ciudades, porque eran vistos como presencias sagradas capaces de proteger, sanar y acercar a los fieles al poder de Dios.</p>
-
-                  <p>Por eso, la traslación de las reliquias de san Andrés y san Timoteo a Constantinopla fue un episodio clave en la formación de la identidad cristiana de la Nueva Roma. La ciudad no heredó de forma automática el prestigio religioso de las grandes sedes apostólicas del cristianismo antiguo. Lo fue construyendo con el tiempo, mediante la llegada de reliquias, la fundación de iglesias y la creación de nuevas tradiciones sagradas. Con los siglos, Constantinopla llegaría a reunir una de las colecciones de reliquias más famosas del mundo cristiano. Entre los primeros pasos de esa historia estuvieron las reliquias de Andrés, Timoteo y Lucas, trasladadas desde distintos rincones del Imperio durante el reinado de Constancio II, depositadas en la iglesia de los Santos Apóstoles y puestas al servicio de la memoria religiosa e imperial de la capital.</p>
-
-                  <h4>Bibliografía básica</h4>
-                  <ul class="bibliography">
-                    <li>Klein, Holger A. “Sacred Relics and Imperial Ceremonies at the Great Palace of Constantinople.” In <em>Visualisierungen von Herrschaft</em>, edited by Franz Alto Bauer, 79–99. Byzas 5. Istanbul: Ege Yayınları, 2006.</li>
-                    <li>Mango, Cyril. “Constantine’s Mausoleum and the Translation of Relics.” <em>Byzantinische Zeitschrift</em> 83, no. 1 (1990): 51–62.</li>
-                    <li>Woods, David. “The Date of the Translation of the Relics of SS. Luke and Andrew to Constantinople.” <em>Vigiliae Christianae</em> 45, no. 3 (1991): 286–292.</li>
-                    <li>Wortley, John. “The Earliest Relic-Importations to Constantinople.” <em>Pecia: Ressources en médiévistique</em> 8–11, no. 1 (2005): 207–225.</li>
-                  </ul>
-                </div>
-              </details>
-            </div>
+          <div class="lang-version lang-es">
+            <h3>Reliquiomanía cristiana: una introducción al culto de las reliquias</h3>
+            <p>La palabra reliquia viene del latín <em>reliquiae</em>, que significa restos o remanentes. En el lenguaje común, suele referirse a algo que queda del pasado: un objeto antiguo, un vestigio o una huella material de otra época.</p>
           </div>
-        </article>
 
+          <div class="language-switch" aria-label="Choose language">
+            <button type="button" data-article="christian-relicmania" data-lang="en" aria-pressed="true">English</button>
+            <button type="button" data-article="christian-relicmania" data-lang="es" aria-pressed="false">Español</button>
+          </div>
+
+          <details>
+            <summary>
+              <span class="summary-en">Read full text</span>
+              <span class="summary-es" style="display:none;">Leer texto completo</span>
+            </summary>
+
+            <div class="lang-version lang-en active">
+              <p>In this broad sense, all human cultures preserve relics of some kind, from family heirlooms and ancestral objects to national monuments, documents, and treasures.</p>
+
+              <p>Many religions have also preserved and honoured relics. Buddhism, for example, developed important traditions around the bodily remains of holy figures. In Islam, some objects associated with the Prophet Muhammad and the first caliphs have also been preserved and respected. Christianity, however, gave relics an especially central role. From Late Antiquity onward, Christian thinkers developed a theological defence of relic veneration, and relics became a major part of Christian religious life, especially during the Middle Ages.</p>
+
+              <p>In a specifically Christian sense, relics are the bodily remains of saints and sacred figures, such as Christ and the Virgin Mary, or objects sanctified through contact with these figures or with their remains. For centuries, Christians venerated holy relics as instruments through which faith, the intercession of the saints, and the power of God could work miracles. Relics were used in many contexts: the consecration of churches, healing rituals, exorcisms, prayers during disasters, solemn oaths, public processions, and even military ceremonies.</p>
+
+              <h4>The Study of Relics</h4>
+
+              <p>The modern study of Christian relics has its roots in the religious debates that divided Europe from the sixteenth century onward. Protestant reformers rejected the cult of saints and relics, together with the veneration of images, as superstitions of the Roman Church. They questioned the reliability of saints’ lives, the antiquity of Catholic traditions, and the authenticity of many relics.</p>
+
+              <p>Catholic scholars responded by defending these practices with historical arguments and documentary evidence. This context gave rise to major scholarly projects, such as the Bollandist Society and the <em>Acta Sanctorum</em>. Although these works were shaped by confessional debate, they also helped create the foundations for the historical study of saints and relics.</p>
+
+              <p>During the Enlightenment, relics were often dismissed as signs of superstition, fraud, or irrational belief. More modern academic approaches appeared in the twentieth century, especially among historians of religion, art, and Late Antiquity. A major shift came in the 1970s with the work of Peter Brown, who argued that the cult of saints was not simply a symptom of decline or superstition, but one of the great cultural transformations of Late Antiquity. Since then, the study of relics has expanded enormously. Scholars now examine relics as religious, social, political, artistic, and material objects.</p>
+
+              <h4>The Origins of the Cult of Relics</h4>
+
+              <p>Historians influenced by Protestant polemics often saw the cult of saints and relics as a survival of paganism. According to this view, relic veneration was one example of how early Christianity had been “contaminated” by non-Christian practices after the legalisation and officialisation of the Church under Constantine.</p>
+
+              <p>This idea had a long influence. Even today, it is common to hear that the cult of saints was simply a continuation of pagan polytheism, or that the cult of relics was just a Christian version of older magical and amuletic practices. But this explanation is too simple. Peter Brown showed that the rise of the cult of saints was better understood as a new cultural phenomenon of Late Antiquity. It had connections with older ideas and practices, but it was not merely a passive survival of pagan religion.</p>
+
+              <p>Robert Wiśniewski has made a similar argument for relics. In his study of the beginnings of the cult of relics, he argues that Christian relic veneration emerged above all in the second half of the fourth century. It developed from the veneration of martyrs’ tombs and from reports of miracles, especially healings and exorcisms, that were said to occur at those places.</p>
+
+              <p>Other scholars have added important nuances. The Christian cult of relics was new, but it did not appear in a cultural vacuum. It developed in the religious world of the late antique Mediterranean and Near East, where people already believed in sacred places, holy bodies, protective objects, and contact with divine power. The cult of heroes’ tombs in the Greco-Roman world, the veneration of biblical figures, and the use of amulets all formed part of this wider background.</p>
+
+              <p>The key point is balance. We should not reduce the Christian cult of relics to a simple continuation of pagan practices. But neither should we imagine that it emerged without any connection to the world around it. It was a new Christian development, shaped by older cultural expectations and by biblical traditions.</p>
+
+              <p>In the Acts of the Apostles, cloths that had touched Saint Paul were said to heal the sick and drive away evil spirits. This shows that ideas about holy contact, protection, and healing objects existed among Christians from a very early period. The Ark of the Covenant, the staff of Moses, and other sacred objects from the Old Testament also gave Christians powerful models for thinking about holy matter.</p>
+
+              <p>However, perhaps the most interesting aspect of the Christian cult of relics is that it gave rise to ideas and practices that were completely new, or at least highly unusual, in the pre-Christian ancient world. These included, for example, the theft of relics and the ritual humiliation of relics, both analysed in the studies of Patrick Geary. These practices are not only curious and fascinating; they also show how, through the study of relics, we can approach the ways in which people in the past understood the relationship between the divine and material culture, as well as the presence of the supernatural in the everyday world around them.</p>
+
+              <h4>Basic Bibliography</h4>
+              <ul class="bibliography">
+                <li>Brown, Peter. “The Rise and Function of the Holy Man in Late Antiquity.” <em>Journal of Roman Studies</em> 61 (1971): 80–101.</li>
+                <li>Brown, Peter. <em>The Cult of the Saints: Its Rise and Function in Latin Christianity</em>. Chicago: University of Chicago Press, 1981.</li>
+                <li>Delehaye, Hippolyte. <em>Les origines du culte des martyrs</em>. Brussels: Société des Bollandistes, 1912.</li>
+                <li>Frolow, Anatole. <em>La relique de la Vraie Croix: recherches sur le développement d’un culte</em>. Paris: Institut français d’études byzantines, 1961.</li>
+                <li>Geary, Patrick J. <em>Furta Sacra: Thefts of Relics in the Central Middle Ages</em>. Princeton: Princeton University Press, 1978. Revised edition, 1991.</li>
+                <li>Hahn, Cynthia, and Holger A. Klein, eds. <em>Saints and Sacred Matter: The Cult of Relics in Byzantium and Beyond</em>. Washington, DC: Dumbarton Oaks Research Library and Collection, 2015.</li>
+                <li>Smith, Julia M. H. “Portable Christianity: Relics in the Medieval West, c. 700–1200.” <em>Proceedings of the British Academy</em> 181 (2012): 143–167.</li>
+                <li>Wiśniewski, Robert. <em>The Beginnings of the Cult of Relics</em>. Oxford: Oxford University Press, 2019.</li>
+                <li>Wortley, John. <em>Studies on the Cult of Relics in Byzantium up to 1204</em>. Farnham, Surrey: Ashgate Variorum, 2009.</li>
+              </ul>
+
+              <p class="copyright-note">© Joaquín Serrano del Pozo, 2026. All rights reserved.</p>
+            </div>
+
+            <div class="lang-version lang-es">
+              <p>En este sentido amplio, todas las culturas humanas conservan reliquias de algún tipo, desde recuerdos familiares y objetos ancestrales hasta monumentos, documentos y tesoros nacionales.</p>
+
+              <p>Muchas religiones también han preservado y honrado reliquias. El budismo, por ejemplo, desarrolló importantes tradiciones en torno a los restos corporales de figuras santas. En el islam, algunos objetos asociados con el profeta Mahoma y los primeros califas también han sido conservados y respetados. Sin embargo, el cristianismo dio a las reliquias un lugar especialmente central. Desde la Antigüedad Tardía, los pensadores cristianos desarrollaron una defensa teológica de su veneración, y las reliquias se convirtieron en una parte fundamental de la vida religiosa cristiana, sobre todo durante la Edad Media.</p>
+
+              <p>En un sentido específicamente cristiano, las reliquias son los restos corporales de los santos y de figuras sagradas, como Cristo y la Virgen María, o bien objetos santificados por el contacto con estas figuras o con sus restos. Durante siglos, los cristianos veneraron las santas reliquias como instrumentos a través de los cuales la fe, la intercesión de los santos y el poder de Dios podían obrar milagros. Las reliquias fueron usadas en muchos contextos: la consagración de iglesias, ritos de sanación, exorcismos, plegarias durante desastres, juramentos solemnes, procesiones públicas e incluso ceremonias militares.</p>
+
+              <h4>El estudio de las reliquias</h4>
+
+              <p>El estudio moderno de las reliquias cristianas tiene sus raíces en los debates religiosos que dividieron Europa desde el siglo XVI en adelante. Los reformadores protestantes rechazaron el culto de los santos y las reliquias, junto con la veneración de imágenes, como supersticiones de la Iglesia romana. También cuestionaron la confiabilidad de las vidas de santos, la antigüedad de las tradiciones católicas y la autenticidad de muchas reliquias.</p>
+
+              <p>Los estudiosos católicos respondieron defendiendo estas prácticas mediante argumentos históricos y evidencia documental. En este contexto surgieron grandes proyectos eruditos, como la Sociedad de los Bolandistas y los <em>Acta Sanctorum</em>. Aunque estas obras estaban marcadas por el debate confesional, también ayudaron a crear las bases del estudio histórico de los santos y las reliquias.</p>
+
+              <p>Durante la Ilustración, las reliquias fueron muchas veces descartadas como señales de superstición, fraude o creencias irracionales. Los enfoques académicos más modernos aparecieron en el siglo XX, sobre todo entre historiadores de la religión, del arte y de la Antigüedad Tardía. Un cambio fundamental se produjo en la década de 1970 con los trabajos de Peter Brown, quien sostuvo que el culto de los santos no debía entenderse simplemente como decadencia o superstición, sino como una de las grandes transformaciones culturales de la Antigüedad Tardía. Desde entonces, el estudio de las reliquias se ha expandido enormemente. Hoy los académicos las estudian como objetos religiosos, sociales, políticos, artísticos y materiales.</p>
+
+              <h4>Los orígenes del culto a las reliquias</h4>
+
+              <p>La historiografía influida por las polémicas protestantes solía ver el culto a los santos y a las reliquias como una supervivencia del paganismo. Según esta interpretación, la veneración de reliquias sería un ejemplo de cómo el cristianismo primitivo fue “contaminado” por prácticas no cristianas después de la legalización y oficialización de la Iglesia bajo Constantino.</p>
+
+              <p>Esta idea tuvo una larga influencia. Incluso hoy es común escuchar que el culto a los santos fue simplemente una continuación del politeísmo pagano, o que el culto a las reliquias fue apenas una versión cristiana de antiguas prácticas mágicas y amuléticas. Pero esta explicación es demasiado simple. Peter Brown mostró que el desarrollo del culto de los santos se entiende mejor como un fenómeno cultural nuevo de la Antigüedad Tardía. Tuvo conexiones con ideas y prácticas anteriores, pero no fue una simple supervivencia pasiva del paganismo.</p>
+
+              <p>Robert Wiśniewski ha desarrollado un argumento parecido para las reliquias. En su estudio sobre los inicios del culto a las reliquias, sostiene que la veneración cristiana de estos objetos surgió sobre todo en la segunda mitad del siglo IV. Se desarrolló a partir de la veneración de las tumbas de los mártires y de los relatos de milagros, especialmente curaciones y exorcismos, que supuestamente ocurrían en esos lugares.</p>
+
+              <p>Otros académicos han agregado matices importantes. El culto cristiano a las reliquias fue nuevo, pero no apareció en un vacío cultural. Se desarrolló dentro del mundo religioso del Mediterráneo y el Medio Oriente tardoantiguos, donde ya existían creencias sobre lugares sagrados, cuerpos santos, objetos protectores y contacto con el poder divino. El culto a las tumbas de los héroes en el mundo grecorromano, la veneración de figuras bíblicas y el uso de amuletos formaban parte de ese trasfondo más amplio.</p>
+
+              <p>El punto clave es mantener el equilibrio. No conviene reducir el culto cristiano a las reliquias a una simple continuación de prácticas paganas. Pero tampoco hay que imaginar que surgió sin ninguna conexión con el mundo que lo rodeaba. Fue un desarrollo cristiano nuevo, formado dentro de expectativas culturales más antiguas y también dentro de tradiciones bíblicas.</p>
+
+              <p>En los Hechos de los Apóstoles, se dice que los paños que habían tocado a san Pablo sanaban a los enfermos y expulsaban espíritus malignos. Esto muestra que las ideas sobre contacto santo, protección y objetos sanadores existían entre los cristianos desde una época muy temprana. El Arca de la Alianza, el bastón de Moisés y otros objetos sagrados del Antiguo Testamento también ofrecieron modelos poderosos para pensar la materia santa.</p>
+
+              <p>Sin embargo, quizás lo más interesante del culto cristiano a las reliquias es que dio origen a ideas y prácticas completamente novedosas, o al menos muy poco comunes en el mundo antiguo precristiano. Entre ellas se encuentran, por ejemplo, el robo de reliquias o los ritos de humillación de reliquias, analizados en los estudios de Patrick Geary. Estas prácticas no sólo son curiosas y fascinantes; también muestran cómo, a través del estudio de las reliquias, podemos acercarnos a la forma en que la gente del pasado entendía la relación entre lo divino y la cultura material, así como la presencia de lo sobrenatural en el mundo cotidiano que la rodeaba.</p>
+
+              <h4>Bibliografía básica</h4>
+              <ul class="bibliography">
+                <li>Brown, Peter. “The Rise and Function of the Holy Man in Late Antiquity.” <em>Journal of Roman Studies</em> 61 (1971): 80–101.</li>
+                <li>Brown, Peter. <em>The Cult of the Saints: Its Rise and Function in Latin Christianity</em>. Chicago: University of Chicago Press, 1981.</li>
+                <li>Delehaye, Hippolyte. <em>Les origines du culte des martyrs</em>. Brussels: Société des Bollandistes, 1912.</li>
+                <li>Frolow, Anatole. <em>La relique de la Vraie Croix: recherches sur le développement d’un culte</em>. Paris: Institut français d’études byzantines, 1961.</li>
+                <li>Geary, Patrick J. <em>Furta Sacra: Thefts of Relics in the Central Middle Ages</em>. Princeton: Princeton University Press, 1978. Edición revisada, 1991.</li>
+                <li>Hahn, Cynthia, and Holger A. Klein, eds. <em>Saints and Sacred Matter: The Cult of Relics in Byzantium and Beyond</em>. Washington, DC: Dumbarton Oaks Research Library and Collection, 2015.</li>
+                <li>Smith, Julia M. H. “Portable Christianity: Relics in the Medieval West, c. 700–1200.” <em>Proceedings of the British Academy</em> 181 (2012): 143–167.</li>
+                <li>Wiśniewski, Robert. <em>The Beginnings of the Cult of Relics</em>. Oxford: Oxford University Press, 2019.</li>
+                <li>Wortley, John. <em>Studies on the Cult of Relics in Byzantium up to 1204</em>. Farnham, Surrey: Ashgate Variorum, 2009.</li>
+              </ul>
+
+              <p class="copyright-note">© Joaquín Serrano del Pozo, 2026. Todos los derechos reservados.</p>
+            </div>
+          </details>
+        </div>
       </div>
-    </section>
+    </article>
+
+    <article class="relic-article" id="andrew-timothy" data-current-lang="en">
+      <div class="relic-article-grid">
+        <figure>
+          <img src="HolyApostolesChurch.jpg" alt="Miniature believed to represent the Church of the Holy Apostles" />
+          <figcaption>
+            Miniature from a twelfth-century Byzantine manuscript, believed to represent the Church of the Holy Apostles. Paris, Bibliothèque nationale de France, Grec. 1208, fol. 3v, BnF Gallica.
+            <a href="https://gallica.bnf.fr/ark:/12148/btv1b55013447b/f18.item" target="_blank" rel="noopener">Source</a>.
+          </figcaption>
+        </figure>
+
+        <div>
+          <div class="lang-version lang-en active">
+            <h3>The Relics of Saint Andrew and Saint Timothy in Constantinople</h3>
+            <p>The ancient city of Byzantium, later famous for its enormous collection of sacred treasures, did not play an important role in the first centuries of Christianity.</p>
+          </div>
+
+          <div class="lang-version lang-es">
+            <h3>Las reliquias de san Andrés y san Timoteo en Constantinopla</h3>
+            <p>La antigua ciudad de Bizancio, que más tarde sería famosa por su enorme colección de tesoros sagrados, no tuvo un papel importante en los primeros siglos del cristianismo.</p>
+          </div>
+
+          <div class="language-switch" aria-label="Choose language">
+            <button type="button" data-article="andrew-timothy" data-lang="en" aria-pressed="true">English</button>
+            <button type="button" data-article="andrew-timothy" data-lang="es" aria-pressed="false">Español</button>
+          </div>
+
+          <details>
+            <summary>
+              <span class="summary-en">Read full text</span>
+              <span class="summary-es" style="display:none;">Leer texto completo</span>
+            </summary>
+
+            <div class="lang-version lang-en active">
+              <p>For this reason, when Constantine founded the New Rome there in 324, the city did not possess especially important relics, apart from the bodies of a few little-known local martyrs. The great collection of relics that later made Constantinople famous was formed gradually, through sacred objects and remains brought from other parts of the Empire.</p>
+
+              <p>The earliest translations of relics were often attributed to Constantine the Great. This is not surprising, since the Byzantines tended to associate almost everything connected with the origins of their capital with Constantine. However, as John Wortley pointed out, there is no clear contemporary evidence that major relic translations to Constantinople took place during his reign. The earliest known importations seem to belong instead to the reign of his son, Constantius II, between 337 and 361. Later, during the fifth century, especially under Theodosius II and his sister Pulcheria, the arrival of relics in the capital became much more frequent.</p>
+
+              <p>These early translations formed part of the wider Christianisation of the imperial city. Constantinople was the capital of the Eastern Roman Empire, an empire that from the mid-fourth century onward increasingly identified itself with Christianity. Yet the New Rome on the Bosporus could not yet compete with the Christian prestige of other cities of the Empire. Rome had the tombs of Peter and Paul. Jerusalem preserved the places associated with the life, death, and resurrection of Christ. Antioch, Ephesus, and other cities of the eastern Mediterranean possessed ancient apostolic and martyrial traditions. Constantinople, by contrast, was a new capital, and much of its Christian prestige had to be built through churches, ceremonies, sacred stories, and relics.</p>
+
+              <p>In this context, we can understand the arrival of the relics of Saint Andrew and Saint Timothy, normally associated also with those of Saint Luke. According to the most widely accepted tradition, these relics were translated to Constantinople around the middle of the fourth century, probably between 356 and 357, during the reign of Constantius II. The relics of Saint Andrew are said to have come from Patras, in Greece; those of Saint Timothy from Ephesus; and those of Saint Luke from Thebes. The exact details are difficult to reconstruct, because the sources are late and sometimes contradictory, but tradition places these relics among the first major sacred importations to the capital.</p>
+
+              <p>The place where they were deposited was especially significant: the church of the Holy Apostles. This building occupied a central place in the religious and political life of Constantinople. It was linked to the memory of the apostles and also to imperial power, because Constantine’s mausoleum stood there and many later Byzantine emperors would also be buried there. The presence of apostolic relics in this space strengthened the association between imperial power and Christianity, helping to present the authority of the emperors as part of a sacred order.</p>
+
+              <p>Saint Andrew had particular importance. According to Christian tradition, he was one of the first disciples called by Christ and the brother of Saint Peter. His presence in Constantinople allowed the capital to be connected with apostolic authority. Over time, this association became even more important, as Byzantine tradition came to present Andrew as the founder of the Church of Byzantium. This idea developed more strongly in later centuries, but the presence of his relics in the capital helped give it a material and symbolic foundation.</p>
+
+              <p>Saint Timothy, for his part, did not belong to the group of the twelve apostles, but he was a figure very close to the origins of Christianity. He was a disciple and collaborator of Saint Paul, and his relics connected Constantinople with Pauline memory and with the first expansion of Christianity in the eastern Mediterranean.</p>
+
+              <p>The arrival of these relics also shows an important change in the Christian understanding of holy bodies. In Roman tradition, moving human remains from one tomb to another was a delicate and even problematic action. Funerary laws and customs protected the rest of the dead. During Late Antiquity, however, a new Christian sensibility began to take shape. The remains of the saints could be moved, deposited under altars, and brought to new cities, because they were seen as sacred presences capable of protecting, healing, and bringing the faithful closer to the power of God.</p>
+
+              <p>For this reason, the translation of the relics of Saint Andrew and Saint Timothy to Constantinople was a key episode in the formation of the Christian identity of the New Rome. The city did not automatically inherit the religious prestige of the great apostolic centres of ancient Christianity. It built that prestige over time, through the arrival of relics, the foundation of churches, and the creation of new sacred traditions. Over the centuries, Constantinople would gather one of the most famous collections of relics in the Christian world. Among the first steps in that history were the relics of Andrew, Timothy, and Luke, brought from different parts of the Empire during the reign of Constantius II, deposited in the church of the Holy Apostles, and placed at the service of the religious and imperial memory of the capital.</p>
+
+              <h4>Basic Bibliography</h4>
+              <ul class="bibliography">
+                <li>Klein, Holger A. “Sacred Relics and Imperial Ceremonies at the Great Palace of Constantinople.” In <em>Visualisierungen von Herrschaft</em>, edited by Franz Alto Bauer, 79–99. Byzas 5. Istanbul: Ege Yayınları, 2006.</li>
+                <li>Mango, Cyril. “Constantine’s Mausoleum and the Translation of Relics.” <em>Byzantinische Zeitschrift</em> 83, no. 1 (1990): 51–62.</li>
+                <li>Woods, David. “The Date of the Translation of the Relics of SS. Luke and Andrew to Constantinople.” <em>Vigiliae Christianae</em> 45, no. 3 (1991): 286–292.</li>
+                <li>Wortley, John. “The Earliest Relic-Importations to Constantinople.” <em>Pecia: Ressources en médiévistique</em> 8–11, no. 1 (2005): 207–225.</li>
+              </ul>
+
+              <p class="copyright-note">© Joaquín Serrano del Pozo, 2026. All rights reserved.</p>
+            </div>
+
+            <div class="lang-version lang-es">
+              <p>Por eso, cuando Constantino fundó allí la Nueva Roma en el año 324, la ciudad no contaba con reliquias especialmente importantes, salvo los cuerpos de algunos mártires locales poco conocidos. La gran colección de reliquias que más tarde haría célebre a Constantinopla se formó gradualmente, a través de objetos y restos sagrados traídos desde otros lugares del Imperio.</p>
+
+              <p>Las primeras traslaciones de reliquias fueron atribuidas con frecuencia a Constantino el Grande. Esto no es extraño, porque los bizantinos tendían a asociar con Constantino casi todo lo relacionado con los orígenes de su capital. Sin embargo, como señaló John Wortley, no existe evidencia contemporánea clara de que durante su reinado se hayan producido traslados importantes de reliquias hacia Constantinopla. Las primeras importaciones conocidas parecen pertenecer más bien al reinado de su hijo, Constancio II, entre los años 337 y 361. Más tarde, durante el siglo V, especialmente bajo Teodosio II y su hermana Pulqueria, la llegada de reliquias a la capital se volvió mucho más frecuente.</p>
+
+              <p>Estos primeros traslados formaron parte del proceso más amplio de cristianización de la ciudad imperial. Constantinopla era la capital del Imperio romano de Oriente, un imperio que desde mediados del siglo IV se fue identificando de manera creciente con el cristianismo. Sin embargo, la Nueva Roma del Bósforo no podía competir todavía con el prestigio cristiano de otras ciudades del Imperio. Roma tenía las tumbas de Pedro y Pablo. Jerusalén conservaba los lugares asociados con la vida, muerte y resurrección de Cristo. Antioquía, Éfeso y otras ciudades del Mediterráneo oriental poseían antiguas tradiciones apostólicas y martiriales. Constantinopla, en cambio, era una capital nueva, y buena parte de su prestigio cristiano tuvo que ser construido mediante iglesias, ceremonias, relatos sagrados y reliquias.</p>
+
+              <p>En este contexto se entiende la llegada de las reliquias de san Andrés y san Timoteo, normalmente asociadas también con las de san Lucas. Según la tradición más aceptada, estas reliquias fueron trasladadas a Constantinopla hacia mediados del siglo IV, probablemente entre los años 356 y 357, durante el reinado de Constancio II. Las reliquias de san Andrés habrían venido desde Patras, en Grecia; las de san Timoteo desde Éfeso; y las de san Lucas desde Tebas. Los detalles exactos son difíciles de reconstruir, porque las fuentes son tardías y a veces contradictorias, pero la tradición sitúa estas reliquias entre las primeras grandes importaciones sagradas de la capital.</p>
+
+              <p>El lugar donde fueron depositadas era especialmente significativo: la iglesia de los Santos Apóstoles. Este edificio ocupaba un lugar central en la vida religiosa y política de Constantinopla. Estaba vinculado a la memoria de los apóstoles y también al poder imperial, porque allí se encontraba el mausoleo de Constantino y allí serían enterrados, más tarde, muchos emperadores bizantinos. La presencia de reliquias apostólicas en este espacio reforzaba la asociación entre el poder imperial y el cristianismo, contribuyendo a presentar la autoridad de los emperadores como parte de un orden sagrado.</p>
+
+              <p>San Andrés tenía una importancia particular. Según la tradición cristiana, fue uno de los primeros discípulos llamados por Cristo y hermano de san Pedro. Su presencia en Constantinopla permitía vincular la capital con la autoridad apostólica. Con el tiempo, esta asociación se volvió todavía más importante, pues la tradición bizantina llegó a presentar a Andrés como fundador de la Iglesia de Bizancio. Esta idea se desarrolló con más fuerza en siglos posteriores, pero la presencia de sus reliquias en la capital ayudó a darle un fundamento material y simbólico.</p>
+
+              <p>San Timoteo, por su parte, no pertenecía al grupo de los doce apóstoles, pero era una figura muy cercana a los orígenes del cristianismo. Fue discípulo y colaborador de san Pablo, y sus reliquias conectaban a Constantinopla con la memoria paulina y con la primera expansión del cristianismo en el Mediterráneo oriental.</p>
+
+              <p>La llegada de estas reliquias también muestra un cambio importante en la forma cristiana de entender los cuerpos santos. En la tradición romana, mover restos humanos de una tumba a otra era una acción delicada e incluso problemática. Las leyes y costumbres funerarias protegían el descanso de los muertos. Sin embargo, durante la Antigüedad Tardía comenzó a imponerse una nueva sensibilidad cristiana. Los restos de los santos podían ser trasladados, depositados bajo altares y llevados a nuevas ciudades, porque eran vistos como presencias sagradas capaces de proteger, sanar y acercar a los fieles al poder de Dios.</p>
+
+              <p>Por eso, la traslación de las reliquias de san Andrés y san Timoteo a Constantinopla fue un episodio clave en la formación de la identidad cristiana de la Nueva Roma. La ciudad no heredó de forma automática el prestigio religioso de las grandes sedes apostólicas del cristianismo antiguo. Lo fue construyendo con el tiempo, mediante la llegada de reliquias, la fundación de iglesias y la creación de nuevas tradiciones sagradas. Con los siglos, Constantinopla llegaría a reunir una de las colecciones de reliquias más famosas del mundo cristiano. Entre los primeros pasos de esa historia estuvieron las reliquias de Andrés, Timoteo y Lucas, trasladadas desde distintos rincones del Imperio durante el reinado de Constancio II, depositadas en la iglesia de los Santos Apóstoles y puestas al servicio de la memoria religiosa e imperial de la capital.</p>
+
+              <h4>Bibliografía básica</h4>
+              <ul class="bibliography">
+                <li>Klein, Holger A. “Sacred Relics and Imperial Ceremonies at the Great Palace of Constantinople.” In <em>Visualisierungen von Herrschaft</em>, edited by Franz Alto Bauer, 79–99. Byzas 5. Istanbul: Ege Yayınları, 2006.</li>
+                <li>Mango, Cyril. “Constantine’s Mausoleum and the Translation of Relics.” <em>Byzantinische Zeitschrift</em> 83, no. 1 (1990): 51–62.</li>
+                <li>Woods, David. “The Date of the Translation of the Relics of SS. Luke and Andrew to Constantinople.” <em>Vigiliae Christianae</em> 45, no. 3 (1991): 286–292.</li>
+                <li>Wortley, John. “The Earliest Relic-Importations to Constantinople.” <em>Pecia: Ressources en médiévistique</em> 8–11, no. 1 (2005): 207–225.</li>
+              </ul>
+
+              <p class="copyright-note">© Joaquín Serrano del Pozo, 2026. Todos los derechos reservados.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </article>
+
+  </div>
+</section>
+```
+
   </main>
 
   <script>
     function setArticleLanguage(articleId, lang) {
       const article = document.getElementById(articleId);
-      if (!article) return;
+
+      if (!article) {
+        return;
+      }
 
       article.dataset.currentLang = lang;
 
@@ -377,6 +441,6 @@
       });
     });
   </script>
+
 </body>
 </html>
-```
